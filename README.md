@@ -5,6 +5,8 @@ A fork of [**jraynolds**](https://github.com/jraynolds)'s [**Glimmer and Gloom S
 > The bot will work its way, clicking down from the top left to the bottom right. When it runs out of gloom hexes that aren't on the bottom right edges, it'll calculate the appropriate glimmers to click on and work them down to cancel out the remaining edge hexes. Calculations from the excellent <a href="https://docs.google.com/spreadsheets/d/1zrLIjer2FKmknXpyopCSEfVDdEP5rgxWsTOBVFkW8lQ/edit#gid=0">spreadsheet</a> done by <a href="https://flightrising.com/main.php?p=lair&tab=userpage&id=186567">Sqld</a>.
 > If at any time the program has to be stopped, move your cursor to the top left corner of the screen and keep it there. That will terminate the project.
 
+This fork includes the fix for the "TypeError: can only concatenate str (not "int") to str", a more in-depth tutorial for the Installation, and 
+
 # Set-up
 ## Requirements
 - Python (https://www.python.org/downloads/)
@@ -12,29 +14,49 @@ A fork of [**jraynolds**](https://github.com/jraynolds)'s [**Glimmer and Gloom S
   - Pillow (https://pillow.readthedocs.io/en/stable/installation.html#basic-installation)
 
 ## Installation
-- Download Python through the official website.<img align="right" height="200" src="https://user-images.githubusercontent.com/102916830/198846955-49a9a00f-7de5-4e2b-bbd1-18a122bd9349.png">
-  - During the installaton, there will be a option to add Python to PATH. **Make sure to toggle it on!** This will allow you to install the other two things _without_ requiring to manually add Python to PATH (aka what allows you to use python in the Command Prompt).
-- Download get-pip.py (in Requirements) and use the Command Prompt > `py get-pip.py`, let Python do its thing. To test if it's been installed properly, do `pip list`.
+- Download Python through the official website.<img align="right" height="100" src="https://user-images.githubusercontent.com/102916830/198846955-49a9a00f-7de5-4e2b-bbd1-18a122bd9349.png">
+  - During the installaton, there will be a option to add Python to PATH which is what will allow you to use Python commands through Command Prompt (Pic. 1). **MAKE SURE TO TOGGLE THIS ON!** It automatically adds Python _without_ requiring a manual action (a very tricky manual action too).
+- Download get-pip.py (in Requirements) and use the Command Prompt > `py get-pip.py`, let Python do its thing. To test if it's been installed properly, do `pip list`.<img align="right" height="100" src="https://user-images.githubusercontent.com/102916830/198846956-62dd0a63-9859-4e62-849d-2728b992beba.png">
 - The Script will asks for Pillow, use the Command Prompt and use the commands below. It should install Pillow.
 ```
 python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade Pillow
 ``` 
-- Download the script by clicking on Code > Download ZIP. Extract it and enjoy.<img align="right" height="150" src="https://user-images.githubusercontent.com/102916830/198846956-62dd0a63-9859-4e62-849d-2728b992beba.png">
+- Download the script by clicking on Code > Download ZIP (Pic. 2). Extract it and enjoy.
+
+## Setting it Up
+<img align="right" height="100" src="https://user-images.githubusercontent.com/102916830/198889205-8600019f-fb9e-4985-b967-61c464ac2cfb.png">
+
+- Open the Glimmer-and-Gloom-master and on the address bar type "cmd", it will bring a Command Prompt with the Glimmer-and-Gloom-master already on it (Pic. 3).
+- Open Flight Rising > Fairgrounds > Glimmer and Gloom
+  - If the game doesn't cover the screen, zoom out. Remember to edit the PNGs and the Script's setting as well, check [Confidence & PNGs](https://github.com/HjOtal-1/Glimmer-and-Gloom/edit/master/README.md#confidence--pngs) section for more information. 
+- Drag the cmd window to the left or right, it will prompt a thing that will automatically resize the prompt window to be half the screen and let you select the (window to be the) other half.
+- Select Flight Rising and the end result should look like below (Pic. 4).
+
+<p align="center"><img height="250" src="https://user-images.githubusercontent.com/102916830/198889212-77617e8a-ae71-4444-9951-4d7d7b77b337.png"></p>
 
 # Basics
 ## Label Rundown
-This is a rundown of the `board_solver.py` and `autorun.py` options. Some options are best not to be touched with such as TILE_REMOVE_LENIENCY, TILE_SORT_LENIENCY, and BAN_EVASION_MODE.
+This is a rundown of the `board_solver.py` and `autorun.py` options. Some options are best not to be touched with such as TILE_REMOVE_LENIENCY and TILE_SORT_LENIENCY (directly will ), and BAN_EVASION_MODE.
 ### Board_solver.py
 - **GLIMMER_FILE_LOC** & **GLOOM_FILE_LOC** are links to the PNGs of each tile. These are what will represent the tiles for the Script to follow.
 - **CLICK_DELAY** is the default click delay, it's at its lowest.
 - **DELAY_FUZZING** is to add additional delay to the click, so if you feel the click is going too fast or too slow, change the speed here.
 - **HOVER_FUZZING** is to alter the mouse position within the tile limits.
 - **MOUSE_EXIT_BOX** is to alter the size of the exit box.
-- **CONFIDENCE_VALUE** is to alter the Script's detection level of the PNGs in the tiles. Check Confidence & PNGs section for more information.
+- **CONFIDENCE_VALUE** is to alter the Script's detection level of the PNGs in the tiles. Check [Confidence & PNGs](https://github.com/HjOtal-1/Glimmer-and-Gloom/edit/master/README.md#confidence--pngs) section for more information.
 ### Autorun.py
 - **PLAY_FILE_LOC** has the same functions of GLIMMER_FILE_LOC and GLOOM_FILE_LOC but for the Play button after finishing a round.
-- **GAME_DELAY_1**
-- **GAME_DELAY_2**
-- **CONFIDENCE_VALUE**
-- **NUM_LOOPS**
+- **GAME_DELAY_1** is the delay between starting a new game and letting the board load.
+- **GAME_DELAY_2** is the delay between finishing the board and loading the result screen.
+- **CONFIDENCE_VALUE** has the same functionality as Board_solver.py's CONFIDENCE_VALUE but for the Play button.
+- **NUM_LOOPS** how many times will the Autorun loop for. Default setting will obtain all 75,000 Treasure in one sitting (`18*4000 = 72,000+3000 (19th round) = 75,000`).
+
+## Renaming Scripts
+To rename the scripts, just change the name directly and in Board_solver.py's case, remember to edit the `from board_solver import *` to `from [NAME] import *` with the Board_solver.py's new name otherwise the Autorun.py will throw an error because they can't locate the renamed Board_solver.py.
+
+## Confidence & PNGs
+**CONFIDENCE_VALUE** or just Confidence is how well can the script detect the Glimmer Gloom PNGs that correspond to the board tiles, they systematically work together.
+<p align="center">The higher the Confidence, the better the script can detect the pngs as the tiles.</p>
+<p align="center">↕</p>
+<p align="center">The more evenly matched the pngs are to the board tiles, the better the script can confidently detect the pngs as tiles.</p>
