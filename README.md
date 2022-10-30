@@ -7,7 +7,7 @@ A fork of [**jraynolds**](https://github.com/jraynolds)'s [**Glimmer and Gloom S
 
 This fork includes the fix for the "TypeError: can only concatenate str (not "int") to str", a more in-depth tutorial for the Installation, and 
 
-# Set-up
+# Setup
 ## Requirements
 - Python (https://www.python.org/downloads/)
   - Pip (https://pip.pypa.io/en/stable/installation/#get-pip-py)
@@ -24,12 +24,12 @@ python3 -m pip install --upgrade Pillow
 ``` 
 - Download the script by clicking on Code > Download ZIP (Pic. 2). Extract it and enjoy.
 
-## Setting it Up
+## Script Setup
 <img align="right" height="100" src="https://user-images.githubusercontent.com/102916830/198889205-8600019f-fb9e-4985-b967-61c464ac2cfb.png">
 
 - Open the Glimmer-and-Gloom-master and on the address bar type "cmd", it will bring a Command Prompt with the Glimmer-and-Gloom-master already on it (Pic. 3).
 - Open Flight Rising > Fairgrounds > Glimmer and Gloom
-  - If the game doesn't cover the screen, zoom out. Remember to edit the PNGs and the Script's setting as well, check [Confidence & PNGs](https://github.com/HjOtal-1/Glimmer-and-Gloom/edit/master/README.md#confidence--pngs) section for more information. 
+  - If the game doesn't cover the screen, zoom out. Remember to edit the PNGs and the Script's setting as well, check [Confidence & PNGs](https://github.com/HjOtal-1/Glimmer-and-Gloom/blob/master/README.md#confidence--pngs) section for more information. 
 - Drag the cmd window to the left or right, it will prompt a thing that will automatically resize the prompt window to be half the screen and let you select the (window to be the) other half.
 - Select Flight Rising and the end result should look like below (Pic. 4).
 
@@ -44,7 +44,7 @@ This is a rundown of the `board_solver.py` and `autorun.py` options. Some option
 - **DELAY_FUZZING** is to add additional delay to the click, so if you feel the click is going too fast or too slow, change the speed here.
 - **HOVER_FUZZING** is to alter the mouse position within the tile limits.
 - **MOUSE_EXIT_BOX** is to alter the size of the exit box.
-- **CONFIDENCE_VALUE** is to alter the Script's detection level of the PNGs in the tiles. Check [Confidence & PNGs](https://github.com/HjOtal-1/Glimmer-and-Gloom/edit/master/README.md#confidence--pngs) section for more information.
+- **CONFIDENCE_VALUE** is to alter the Script's detection level of the PNGs in the tiles. Check [Confidence & PNGs](https://github.com/HjOtal-1/Glimmer-and-Gloom/blob/master/README.md#confidence--pngs) section for more information.
 ### Autorun.py
 - **PLAY_FILE_LOC** has the same functions of GLIMMER_FILE_LOC and GLOOM_FILE_LOC but for the Play button after finishing a round.
 - **GAME_DELAY_1** is the delay between starting a new game and letting the board load.
@@ -55,8 +55,18 @@ This is a rundown of the `board_solver.py` and `autorun.py` options. Some option
 ## Renaming Scripts
 To rename the scripts, just change the name directly and in Board_solver.py's case, remember to edit the `from board_solver import *` to `from [NAME] import *` with the Board_solver.py's new name otherwise the Autorun.py will throw an error because they can't locate the renamed Board_solver.py.
 
-## Confidence & PNGs
-**CONFIDENCE_VALUE** or just Confidence is how well can the script detect the Glimmer Gloom PNGs that correspond to the board tiles, they systematically work together.
-<p align="center">The higher the Confidence, the better the script can detect the pngs as the tiles.</p>
+# Confidence & PNGs
+**CONFIDENCE_VALUE** or just Confidence is how well can the script detect the Glimmer.png and Gloom.png (**PNGs**) that correspond to the board tiles, they systematically work together.
+<p align="center">The higher the Confidence, the better the script can detect the PNGs as the tiles.</p>
 <p align="center">↕</p>
-<p align="center">The more evenly matched the pngs are to the board tiles, the better the script can confidently detect the pngs as tiles.</p>
+<p align="center">The more evenly matched the PNGs are to the board tiles, the better the script can confidently detect the PNGs on the board.</p>
+It's important to evenly match these two elements otherwise the Script won't be able to work. To get the PNGs, you must first setup your board according to how it better suits you - change the zoom, align the windows around, ect. The important factors are 1. Make sure the board is visible and 2. Make sure the script is visible.
+
+The PNGs must represent _all_ the tiles of the board and the Play button meaning the PNG you choose must be taken directly from a screenshot of your current setup of the board. The PNGs must evenly match the tiles on the board without any major visual difference as seen in the pic below otherwise it will display the "_list index out of range_" error.
+<p align="center"><img height="150" src="https://user-images.githubusercontent.com/102916830/198897941-416dac1f-4fd9-4417-adf9-0d2252b03802.png"></p>
+
+After gathering the new PNGs, you must setup the Confidence according to what the Script confidently (no pun intended) thinks they can detect the PNGs as tiles. I recommend doing a run with the script (type board_solver.py in the cmd from [Script Setup](https://github.com/HjOtal-1/Glimmer-and-Gloom/blob/master/README.md#script-setup)) and test out the Confidence. If you get a "_'NoneType' object is not subscriptable_", low it till you can keep it running for a full round and remember to check the PNGs if the error is a "_list index out of range_" instead.
+
+In my case, I have a system scaling that isn't divisible by 100 hence my tiles being riddled with visual differences, the PNGs I have are very small with minor differences but because they aren't perfect, the Script would only work if I lowered the Confidence to .8.
+
+## Autorun's Confidence & PNG
