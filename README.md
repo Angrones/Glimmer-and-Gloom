@@ -70,3 +70,5 @@ After gathering the new PNGs, you must setup the Confidence according to what th
 In my case, I have a system scaling that isn't divisible by 100 hence my tiles being riddled with visual differences, the PNGs I have are very small with minor differences but because they aren't perfect, the Script would only work if I lowered the Confidence to .8.
 
 ## Autorun's Confidence & PNG
+The Autorun's Confidence and PNGs work exactly the same as the Board_solver.py except it's for the Play button after a game has been completed. Just like the tile PNGs, the Play PNG must contain minor visual differences so the Script can confidently detect it as the Play button. Take the example below:
+<p align="center"><img height="150" src="https://user-images.githubusercontent.com/102916830/198839758-0482050b-b55d-48a4-b60f-47b4f268f998.png"></p>
