@@ -80,7 +80,7 @@ The Autorun's Confidence and PNGs work exactly the same as the Board_solver.py e
 # Troubleshooting Q&A
 **Q:** I'm having issues installing Python and/or the other additions.
 
-**A:** Python requires to be installed in PATH which lets you use Python commands through the Command Prompt. To check if Python is installed in your PATH, consult this [article](https://projects.raspberrypi.org/en/projects/using-pip-on-windows/4).
+**A:** We suggest searching on how to install Python. As for the other additions, Python requires to be installed in PATH which lets you use Python commands through the Command Prompt. To check if Python is installed in your PATH, consult this [article](https://projects.raspberrypi.org/en/projects/using-pip-on-windows/4).
 
 ---
 **Q:** When I started the Script, I got a "_IndexError: list assignment index out of range/IndexError: list index out of range_" error.
