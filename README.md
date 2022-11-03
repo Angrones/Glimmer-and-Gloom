@@ -26,15 +26,16 @@ A fork of [**jraynolds**](https://github.com/jraynolds)'s [**Glimmer and Gloom S
 python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade Pillow
 ``` 
+<img align="right" height="100" src="https://user-images.githubusercontent.com/102916830/198889205-8600019f-fb9e-4985-b967-61c464ac2cfb.png">
+
 - Download the script by clicking on Code > Download ZIP (Pic. 2).
-- After you extracted it, open Command Prompt and run `pip install -r requirements.txt`, these will install the remaining components the Script will need in order to work.
+- After you extracted it, open Command Prompt through the extracted folder's address bar (Pic. 3) and run `pip install -r requirements.txt`, these will install the remaining components to make the Script functional.
 
 You're now ready to move to the Script setup.
 
 ## Script Setup
-<img align="right" height="100" src="https://user-images.githubusercontent.com/102916830/198889205-8600019f-fb9e-4985-b967-61c464ac2cfb.png">
 
-- Open the Glimmer-and-Gloom-master and on the address bar type "cmd", it will bring a Command Prompt with the Glimmer-and-Gloom-master already on it (Pic. 3).
+- Open the Glimmer-and-Gloom-master and on the address bar type "cmd", it will bring a Command Prompt with the Glimmer-and-Gloom-master already on it.
 - Open Flight Rising > Fairgrounds > Glimmer and Gloom
   - If the game doesn't cover the screen, zoom out. Remember to edit the PNGs and the Script's setting as well, check [Confidence & PNGs](https://github.com/HjOtal-1/Glimmer-and-Gloom/blob/master/README.md#confidence--pngs) section for more information. 
 - Drag the cmd window to the left or right, it will prompt a thing that will automatically resize the prompt window to be half the screen and let you select the (window to be the) other half.
