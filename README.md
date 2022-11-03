@@ -26,7 +26,10 @@ A fork of [**jraynolds**](https://github.com/jraynolds)'s [**Glimmer and Gloom S
 python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade Pillow
 ``` 
-- Download the script by clicking on Code > Download ZIP (Pic. 2). Extract it and enjoy.
+- Download the script by clicking on Code > Download ZIP (Pic. 2).
+- After you extracted it, open Command Prompt and run `pip install -r requirements.txt`, these will install the remaining components the Script will need in order to work.
+
+You're now ready to move to the Script setup.
 
 ## Script Setup
 <img align="right" height="100" src="https://user-images.githubusercontent.com/102916830/198889205-8600019f-fb9e-4985-b967-61c464ac2cfb.png">
