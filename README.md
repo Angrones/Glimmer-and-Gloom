@@ -35,9 +35,9 @@ You're now ready to move to the Script setup.
 
 ## Script Setup
 
-- Open the Glimmer-and-Gloom-master and on the address bar type "cmd", it will bring a Command Prompt with the Glimmer-and-Gloom-master already on it.
-- Open Flight Rising > Fairgrounds > Glimmer and Gloom
-  - If the game doesn't cover the screen, zoom out. Remember to edit the PNGs and the Script's setting as well, check [Confidence & PNGs](https://github.com/HjOtal-1/Glimmer-and-Gloom/blob/master/README.md#confidence--pngs) section for more information. 
+- Open the Glimmer-and-Gloom-master and on the address bar type "cmd", it will bring a Command Prompt with the Glimmer-and-Gloom-master directory already on it (Pic. 3).
+- Open Flight Rising > Fairgrounds > Glimmer and Gloom.
+  - If the game doesn't cover the screen, zoom out. Remember to edit the PNGs and the Script's setting as well, check [Basics](https://github.com/HjOtal-1/Glimmer-and-Gloom/blob/master/README.md#basics) and [Confidence & PNGs](https://github.com/HjOtal-1/Glimmer-and-Gloom/blob/master/README.md#confidence--pngs) section for more information. 
 - Drag the cmd window to the left or right, it will prompt a thing that will automatically resize the prompt window to be half the screen and let you select the (window to be the) other half.
 - Select Flight Rising and the end result should look like below (Pic. 4).
 
@@ -68,17 +68,18 @@ To rename the scripts, just change the name directly and in Board_solver.py's ca
 <p align="center">The higher the Confidence, the better the script can detect the PNGs as the tiles.</p>
 <p align="center">↕</p>
 <p align="center">The more evenly matched the PNGs are to the board tiles, the better the script can confidently detect the PNGs on the board.</p>
-It's important to evenly match these two elements otherwise the Script won't be able to work. To get the PNGs, you must first setup your board according to how it better suits you - change the zoom, align the windows around, ect. The important factors are 1. Make sure the board is visible and 2. Make sure the script is visible.
+It's important to evenly match these two elements otherwise the Script won't be able to work. To get the PNGs, you must first setup your board according to how it suits you the best - change the zoom, align the windows around, ect. The important factors are 1. Make sure the board is visible and 2. Make sure the script is visible.
 
-The PNGs must represent _all_ the tiles of the board and the Play button meaning the PNG you choose must be taken directly from a screenshot of your current display setup of the board (e.g: if you zoomed out about 80% to make the board visible, then that's how your current display setup works). The PNGs must evenly match the tiles on the board without any major visual difference as seen in the pic below otherwise it will display the "_list index out of range_" error.
+The PNGs must represent _all_ the tiles of _your_ board and the Play button meaning the PNG you choose must be taken directly from a screenshot of your current display setup of the board (e.g: if you zoomed out about 80% to make the board visible, then that's how your current display setup works). The PNGs must evenly match the tiles on the board without any major visual difference as seen in the pic below otherwise it will display the "_list index out of range_" error.
 <p align="center"><img height="150" src="https://user-images.githubusercontent.com/102916830/198897941-416dac1f-4fd9-4417-adf9-0d2252b03802.png"></p>
 
-After gathering the new PNGs, you must setup the Confidence according to what the Script confidently (no pun intended) thinks they can detect the PNGs as tiles. I recommend doing a run with the script (type board_solver.py in the cmd from [Script Setup](https://github.com/HjOtal-1/Glimmer-and-Gloom/blob/master/README.md#script-setup)) and test out the Confidence. If you get a "_'NoneType' object is not subscriptable_", low it till you can keep it running for a full round and remember to check the PNGs if the error is a "_list index out of range_" instead.
+---
+After gathering the new PNGs, you must setup the Confidence according to how the Script confidently (no pun intended) thinks they can detect the PNGs as tiles. I recommend doing a run with the script (type board_solver.py in the cmd from [Script Setup](https://github.com/HjOtal-1/Glimmer-and-Gloom/blob/master/README.md#script-setup)) and test out the Confidence. If you get a "_'NoneType' object is not subscriptable_", low it till you can keep it running for a full round and remember to check the PNGs if the error is a "_list index out of range_" instead.
 
 In my case, I have a system scaling that isn't divisible by 100 hence my tiles being riddled with visual differences, the PNGs I have are very small with minor differences but because they aren't perfect, the Script would only work if I lowered the Confidence to .8.
 
 ## Autorun's Confidence & PNG
-The Autorun's Confidence and PNGs work exactly the same as the Board_solver.py except it's for the Play button after a game has been completed. Just like the tile PNGs, the Play PNG must contain minor visual differences so the Script can confidently detect it as the Play button. Take the example below:
+The Autorun's Confidence and PNGs work exactly the same as the Board_solver.py except it's for the Play button after a game has been completed. Just like the tile PNGs, the Play PNG must contain minor visual differences so the Script can confidently detect it as the Play button, and must be taken from your current board display. Take the example below:
 <p align="center"><img height="150" src="https://user-images.githubusercontent.com/102916830/198839758-0482050b-b55d-48a4-b60f-47b4f268f998.png"></p>
 
 # Troubleshooting Q&A
