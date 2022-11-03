@@ -1,11 +1,15 @@
-# WIP! WORK IN PROGRESS!
-A fork of [**jraynolds**](https://github.com/jraynolds)'s [**Glimmer and Gloom Script**](https://github.com/jraynolds/Glimmer-and-Gloom).
-> # Glimmer-and-Gloom
-> A python automated bot to play Flight Rising's Glimmer and Gloom minigame on the Very Hard difficulty.
-> The bot will work its way, clicking down from the top left to the bottom right. When it runs out of gloom hexes that aren't on the bottom right edges, it'll calculate the appropriate glimmers to click on and work them down to cancel out the remaining edge hexes. Calculations from the excellent <a href="https://docs.google.com/spreadsheets/d/1zrLIjer2FKmknXpyopCSEfVDdEP5rgxWsTOBVFkW8lQ/edit#gid=0">spreadsheet</a> done by <a href="https://flightrising.com/main.php?p=lair&tab=userpage&id=186567">Sqld</a>.
-> If at any time the program has to be stopped, move your cursor to the top left corner of the screen and keep it there. That will terminate the project.
+# Glimmer-and-Gloom
+A python automated bot to play Flight Rising's Glimmer and Gloom minigame on the Very Hard difficulty.
 
-This fork includes the fix for the "TypeError: can only concatenate str (not "int") to str", a more in-depth tutorial for the Installation, and 
+The bot will work its way, clicking down from the top left to the bottom right. When it runs out of gloom hexes that aren't on the bottom right edges, it'll calculate the appropriate glimmers to click on and work them down to cancel out the remaining edge hexes. Calculations from the excellent <a href="https://docs.google.com/spreadsheets/d/1zrLIjer2FKmknXpyopCSEfVDdEP5rgxWsTOBVFkW8lQ/edit#gid=0">spreadsheet</a> done by <a href="https://flightrising.com/main.php?p=lair&tab=userpage&id=186567">Sqld</a>.
+If at any time the program has to be stopped, move your cursor to the top left corner of the screen and keep it there. That will terminate the project.
+
+---
+A fork of [**jraynolds**](https://github.com/jraynolds)'s [**Glimmer and Gloom Script**](https://github.com/jraynolds/Glimmer-and-Gloom). This fork includes:
+- A fix for the "TypeError: can only concatenate str (not "int") to str" and Ending game 1 > Beginning game 11 error;
+- An In-depth Installation and Script Setup;
+- A rundown of the basis;
+- An in-depth explanation of how Confidence and the PNGs works for those who still have troubles figuring this out.
 
 # Setup
 ## Requirements
@@ -72,3 +76,18 @@ In my case, I have a system scaling that isn't divisible by 100 hence my tiles b
 ## Autorun's Confidence & PNG
 The Autorun's Confidence and PNGs work exactly the same as the Board_solver.py except it's for the Play button after a game has been completed. Just like the tile PNGs, the Play PNG must contain minor visual differences so the Script can confidently detect it as the Play button. Take the example below:
 <p align="center"><img height="150" src="https://user-images.githubusercontent.com/102916830/198839758-0482050b-b55d-48a4-b60f-47b4f268f998.png"></p>
+
+# Troubleshooting Q&A
+**Q:** I'm having issues installing Python and/or the other additions.
+
+**A:** Python requires to be installed in PATH which lets you use Python commands through the Command Prompt. To check if Python is installed in your PATH, consult this [article](https://projects.raspberrypi.org/en/projects/using-pip-on-windows/4).
+
+---
+**Q:** When I started the Script, I got a "_IndexError: list assignment index out of range/IndexError: list index out of range_" error.
+
+**A:** This is because your PNGs are not taken from your screen's G&G board. The PNGs **must** be direct screenshot of _your_ board in order to represent the tiles, make sure to read [Confidence & PNGs](https://github.com/HjOtal-1/Glimmer-and-Gloom/blob/master/README.md#confidence--pngs) Section for more information.
+
+---
+**Q:** When I starter the Script, I got a "_TypeError: 'Nonetype' object is not subscriptable_" error.
+
+**A:** Usually, this is the first error that will appear and it's due to the Board_solver.py's Confidence being too high to be able to detect the current PNGs as the tile. We recommend to first edit the PNGs (read [Confidence & PNGs](https://github.com/HjOtal-1/Glimmer-and-Gloom/blob/master/README.md#confidence--pngs) Section for more information), if it still displays the error, decrease the Confidence from .9 to .8 and so on depending on whether or not it keeps getting the error.
