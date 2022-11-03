@@ -66,7 +66,7 @@ To rename the scripts, just change the name directly and in Board_solver.py's ca
 <p align="center">The more evenly matched the PNGs are to the board tiles, the better the script can confidently detect the PNGs on the board.</p>
 It's important to evenly match these two elements otherwise the Script won't be able to work. To get the PNGs, you must first setup your board according to how it better suits you - change the zoom, align the windows around, ect. The important factors are 1. Make sure the board is visible and 2. Make sure the script is visible.
 
-The PNGs must represent _all_ the tiles of the board and the Play button meaning the PNG you choose must be taken directly from a screenshot of your current setup of the board. The PNGs must evenly match the tiles on the board without any major visual difference as seen in the pic below otherwise it will display the "_list index out of range_" error.
+The PNGs must represent _all_ the tiles of the board and the Play button meaning the PNG you choose must be taken directly from a screenshot of your current display setup of the board (e.g: if you zoomed out about 80% to make the board visible, then that's how your current display setup works). The PNGs must evenly match the tiles on the board without any major visual difference as seen in the pic below otherwise it will display the "_list index out of range_" error.
 <p align="center"><img height="150" src="https://user-images.githubusercontent.com/102916830/198897941-416dac1f-4fd9-4417-adf9-0d2252b03802.png"></p>
 
 After gathering the new PNGs, you must setup the Confidence according to what the Script confidently (no pun intended) thinks they can detect the PNGs as tiles. I recommend doing a run with the script (type board_solver.py in the cmd from [Script Setup](https://github.com/HjOtal-1/Glimmer-and-Gloom/blob/master/README.md#script-setup)) and test out the Confidence. If you get a "_'NoneType' object is not subscriptable_", low it till you can keep it running for a full round and remember to check the PNGs if the error is a "_list index out of range_" instead.
@@ -85,7 +85,7 @@ The Autorun's Confidence and PNGs work exactly the same as the Board_solver.py e
 ---
 **Q:** When I started the Script, I got a "_IndexError: list assignment index out of range/IndexError: list index out of range_" error.
 
-**A:** This is because your PNGs are not taken from your screen's G&G board. The PNGs **must** be direct screenshot of _your_ board in order to represent the tiles, make sure to read [Confidence & PNGs](https://github.com/HjOtal-1/Glimmer-and-Gloom/blob/master/README.md#confidence--pngs) Section for more information.
+**A:** This is because your PNGs are not taken from how your screen displays the G&G board. The PNGs **must** be direct screenshot of _your_ board display in order to represent the tiles, make sure to read [Confidence & PNGs](https://github.com/HjOtal-1/Glimmer-and-Gloom/blob/master/README.md#confidence--pngs) Section for more information.
 
 ---
 **Q:** When I starter the Script, I got a "_TypeError: 'Nonetype' object is not subscriptable_" error.
