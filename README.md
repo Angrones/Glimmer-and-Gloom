@@ -14,18 +14,19 @@ A fork of [**jraynolds**](https://github.com/jraynolds)'s [**Glimmer and Gloom S
 # Setup
 ## Requirements
 - Python (https://www.python.org/downloads/)
-  - Pip (https://pip.pypa.io/en/stable/installation/#get-pip-py)
+  - Pip (https://pip.pypa.io/en/stable/installation/#get-pip-py) (should come preinstalled with Python)
   - Pillow (https://pillow.readthedocs.io/en/stable/installation.html#basic-installation)
 
 ## Installation
 - Download Python through the official website.<img align="right" height="100" src="https://user-images.githubusercontent.com/102916830/198846955-49a9a00f-7de5-4e2b-bbd1-18a122bd9349.png">
   - During the installaton, there will be a option to add Python to PATH which is what will allow you to use Python commands through Command Prompt (Pic. 1). **MAKE SURE TO TOGGLE THIS ON!** It automatically adds Python _without_ requiring a manual action (a very tricky manual action too).
-- Download get-pip.py (in Requirements) and use the Command Prompt > `py get-pip.py`, let Python do its thing. To test if it's been installed properly, do `pip list`.<img align="right" height="100" src="https://user-images.githubusercontent.com/102916830/198846956-62dd0a63-9859-4e62-849d-2728b992beba.png">
-- The Script will asks for Pillow, use the Command Prompt and use the commands below. It should install Pillow.
+- **By default, pip SHOULD be installed**, so skip to Pillow if doing `pip list` works. 
+  - If it doesn't, download get-pip.py (in Requirements) and use the Command Prompt > `py get-pip.py`, let Python do its thing. To test if it's been installed properly, do `pip list`.<img align="right" height="100" src="https://user-images.githubusercontent.com/102916830/198846956-62dd0a63-9859-4e62-849d-2728b992beba.png">
+- The Script will asks for Pillow, use the Command Prompt and use the commands below. It should install/upgrade Pillow.
 ```
-python3 -m pip install --upgrade pip
-python3 -m pip install --upgrade Pillow
+py -m pip install --upgrade Pillow
 ``` 
+  - To upgrade Pip, do `py -m pip install --upgrade pip`.
 <img align="right" height="100" src="https://user-images.githubusercontent.com/102916830/198889205-8600019f-fb9e-4985-b967-61c464ac2cfb.png">
 
 - Download the script by clicking on Code > Download ZIP (Pic. 2).
