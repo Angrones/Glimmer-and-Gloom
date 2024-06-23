@@ -1,3 +1,6 @@
+> [!WARNING]
+> I'M NOT A PYTHON EXPERT! This means I can't create support for Mac/Linux, and I can't tell if the code is updated or not. Until someone with python knowledge can step in, it is what it is.
+
 # Glimmer-and-Gloom
 A python automated bot to play Flight Rising's Glimmer and Gloom minigame on the Very Hard difficulty.
 
@@ -6,7 +9,7 @@ If at any time the program has to be stopped, move your cursor to the top left c
 
 ---
 A fork of [**jraynolds**](https://github.com/jraynolds)'s [**Glimmer and Gloom Script**](https://github.com/jraynolds/Glimmer-and-Gloom). This fork includes:
-- A fix for the "TypeError: can only concatenate str (not "int") to str" and Ending game 1 > Beginning game 11 error;
+- A (potential) fix for the "TypeError: can only concatenate str (not "int") to str" and Ending game 1 > Beginning game 11 error;
 - An In-depth Installation and Script Setup;
 - A rundown of the basis;
 - An in-depth explanation of how Confidence and the PNGs works for those who still have troubles figuring this out.
