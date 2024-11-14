@@ -1,5 +1,5 @@
 > [!WARNING]
-> I'M NOT A PYTHON EXPERT! This means I can't create support for Mac/Linux, and I can't tell if the code is updated or not. Until someone with python knowledge can step in, it is what it is.
+> I'M NOT A PYTHON EXPERT! This means I can't create support for Mac/Linux, and I can't tell if the code is updated or not. Until someone with python knowledge can step in, it is what it is. This script also requires low maintenance.
 
 # Glimmer-and-Gloom
 A python automated bot to play Flight Rising's Glimmer and Gloom minigame on the Very Hard difficulty.
